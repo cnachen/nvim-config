@@ -1,0 +1,13 @@
+lua require('basic')
+lua require('functions')
+lua require('keybindings')
+lua require('plugins')
+lua require('theme')
+
+lua require('plugin-cfg/orphan')
+lua require('plugin-cfg/lualine')
+lua require('plugin-cfg/mason')
+lua require('plugin-cfg/lsp')
+lua require('plugin-cfg/treesitter')
+lua require('plugin-cfg/trouble')
+lua require('plugin-cfg/nvim-tree')
