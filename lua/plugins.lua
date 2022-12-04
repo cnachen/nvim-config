@@ -13,10 +13,9 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'folke/trouble.nvim' }
   use { 'numToStr/Comment.nvim' }
-  use { 'ellisonleao/gruvbox.nvim' }
   use { 'RRethy/nvim-base16' }
   use { 'norcalli/nvim-colorizer.lua' }
-  use { 'NLKNguyen/papercolor-theme' }
+  use { 'ray-x/lsp_signature.nvim' }
 
   -- use { 'kyazdani42/nvim-tree.lua' }
 end)

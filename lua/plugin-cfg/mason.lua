@@ -5,5 +5,5 @@ require('mason-lspconfig').setup {
     'clangd', 'pylsp', 'sumneko_lua',
     'taplo', 'rust_analyzer',
   },
-  automatic_installation = false,
+  automatic_installation = true,
 }
