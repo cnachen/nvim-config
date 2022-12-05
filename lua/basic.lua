@@ -9,8 +9,8 @@ vim.o.smartcase = true
 vim.o.showmode = true
 vim.o.termguicolors = true
 vim.wo.number = true
--- vim.wo.cursorline = true
--- vim.wo.colorcolumn = '80'
+vim.wo.cursorline = true
+vim.wo.colorcolumn = '80'
 
 vim.cmd('set mouse=')
 
