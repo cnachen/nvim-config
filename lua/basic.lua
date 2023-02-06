@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufFilePost' }, {
 })
 
 vim.api.nvim_create_autocmd({ 'FileType' }, {
-  pattern = { 'c' },
+  pattern = { 'c', 'make' },
   callback = set_ident(8, false)
 })
 
