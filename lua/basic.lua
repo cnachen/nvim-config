@@ -27,6 +27,11 @@ local set_ident = function(width, expand)
   end
 end
 
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufFilePost' }, {
+  pattern = { '*.h' },
+  callback = set_ident(8, false)
+})
+
 vim.api.nvim_create_autocmd({ 'FileType' }, {
   pattern = { 'c' },
   callback = set_ident(8, false)
