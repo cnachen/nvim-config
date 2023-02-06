@@ -28,7 +28,7 @@ local set_ident = function(width, expand)
 end
 
 vim.api.nvim_create_autocmd({ 'FileType' }, {
-  pattern = { 'c' },
+  pattern = { 'c', 'h' },
   callback = set_ident(8, false)
 })
 
