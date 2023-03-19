@@ -3,6 +3,7 @@ lua require('functions')
 lua require('keybindings')
 lua require('plugins')
 lua require('theme')
+lua require('workaround')
 
 lua require('plugin-cfg/orphan')
 lua require('plugin-cfg/lualine')
