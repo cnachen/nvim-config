@@ -1,5 +1,5 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local servers = { 'clangd', 'pylsp', 'sumneko_lua', 'taplo', 'rust_analyzer' }
+local servers = { 'clangd', 'pylsp', 'lua_ls', 'taplo', 'rust_analyzer' }
 
 local lspconfig = require('lspconfig')
 
@@ -51,7 +51,7 @@ cmp.setup {
   },
 }
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
