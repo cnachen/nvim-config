@@ -1,12 +1,7 @@
-local cnachen = require('lualine.themes.onelight')
-cnachen.normal.a.bg = '#608c4d'
-cnachen.insert.a.bg = '#29529f'
-cnachen.inactive.c.fg = '#8f8f8f'
-
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'auto', -- auto
+    theme = 'auto',
     component_separators = { left = '|', right = '|' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
