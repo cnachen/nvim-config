@@ -1,0 +1,6 @@
+require('configs.theme')
+require('configs.highlight')
+require('configs.treesitter')
+require('configs.telescope')
+require('configs.lsp')
+require('configs.cmp')

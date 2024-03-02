@@ -1,2 +1,7 @@
-/plugin
+tags
+test.sh
+.luarc.json
 .DS_Store
+nvim
+lazy-lock.json
+.vscode/
