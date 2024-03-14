@@ -1,6 +1,7 @@
-require('configs.theme')
+require('configs.catppuccin')
 require('configs.highlight')
 require('configs.treesitter')
 require('configs.telescope')
 require('configs.lsp')
+require('configs.lualine')
 require('configs.cmp')

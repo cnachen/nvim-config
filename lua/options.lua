@@ -13,6 +13,7 @@ vim.wo.number = true
 vim.wo.cursorline = true
 vim.wo.colorcolumn = '80'
 
+vim.cmd('colorscheme melange')
 vim.cmd('set listchars=tab:-->,space:·,extends:>,precedes:<')
 vim.cmd('set mouse=')
 

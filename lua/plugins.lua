@@ -1,41 +1,18 @@
 return {
-  -- Feeling
+  -- Appearance
+  'nvim-lualine/lualine.nvim',
   'savq/melange-nvim',
   'sainnhe/everforest',
   'RRethy/nvim-base16',
   'sainnhe/gruvbox-material',
-  -- Git related plugins
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+  },
+  -- Git
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  -- LSP
-  {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
-      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
-      'folke/neodev.nvim',
-    },
-  },
-  -- Autocompletion
-  {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'rafamadriz/friendly-snippets',
-    },
-  },
-  -- Pending keybinds
-  -- {
-  --   'folke/which-key.nvim',
-  --   init = function()
-  --     vim.o.timeout = true
-  --     vim.o.timeoutlen = 300
-  --   end,
-  --   opts = {},
-  -- },
   {
     'lewis6991/gitsigns.nvim',
     opts = {
@@ -53,32 +30,36 @@ return {
       end,
     },
   },
-  -- Catppuccin Theme
+  -- LSP
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      { 'williamboman/mason.nvim', config = true },
+      'williamboman/mason-lspconfig.nvim',
+      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+      'folke/neodev.nvim',
+    },
   },
+  -- Completion
   {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
+      'hrsh7th/cmp-nvim-lsp',
+      'rafamadriz/friendly-snippets',
+    },
   },
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
-  -- Fuzzy Finder (files, lsp, etc)
+  -- Comment
+  'numToStr/Comment.nvim',
+  -- Fuzzy Finder
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-      -- Only load if `make` is available. Make sure you have the system
-      -- requirements installed.
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation,
-        --       refer to the README for telescope-fzf-native for more instructions.
         build = 'make',
         cond = function()
           return vim.fn.executable 'make' == 1
@@ -86,20 +67,20 @@ return {
       },
     },
   },
-
+  -- Highlight
   {
-    -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
   },
+  -- S-Expression
   {
-  'julienvincent/nvim-paredit',
-  config = function()
-    require('nvim-paredit').setup()
-  end
+    'julienvincent/nvim-paredit',
+    config = function()
+      require('nvim-paredit').setup()
+    end
   },
   'gpanders/nvim-parinfer',
 }
