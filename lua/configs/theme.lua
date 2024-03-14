@@ -17,7 +17,7 @@ require('catppuccin').setup {
   },
 }
 
-vim.cmd.colorscheme 'gruvbox-material'
+vim.cmd.colorscheme 'melange'
 
 local mocha = (function()
   local C = require('catppuccin.palettes').get_palette('mocha')
